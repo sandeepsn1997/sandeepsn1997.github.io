@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/botui.min.css" />
+  <link rel="stylesheet" href="../css/botui-theme-default.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+</head>
+<body>
+
+<div class="botui-app-container" id="Chatbot">
+
+  <bot-ui></bot-ui>
+
+</div>
+<div  class="input-container">
+  <div class="input-wrapper">
+    <div class="col-3"style="display: inline-block">
+      <input class="effect-2" type="text" placeholder="Enter text" type="text" id="userinputbox"></input>
+      <span class="focus-border"></span>
+    </div>
+    <div style="display: inline-block">
+            <input type="image" src="../icons/send.png" id="sendbtn" onclick="userSentMsg()" >
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js/vue.min.js"></script>
+<script src="../js/botui.js"></script>
+
+<script src="../js/chatscript.js"></script>
+</body>
+</html>
