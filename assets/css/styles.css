@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    overflow: hidden;
 }
 
 .input-wrapper {
@@ -70,7 +71,9 @@ button.botui-actions-buttons-button {
     text-align: center;
 }
 
-
+.sent-container{
+  width: 80% !important;
+}
 
 
 
