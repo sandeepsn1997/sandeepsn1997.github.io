@@ -211,8 +211,9 @@
 
     root.Vue.directive('botui-scroll', {
       inserted: function (el) {
-        _container.scrollTop = _container.scrollHeight;
-	el.scrollIntoView(true);
+        _container.scrollTop = _container.scrollHeight+50;
+
+	//el.scrollIntoView(true);
       }
     });
 
