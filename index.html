@@ -1,59 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Website</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    .loader h1 {
-      text-align: center;
-      position: absolute;
-      top: 10em;
-      width: 100%;
-      color: #555;
-      letter-spacing: 3px;
-      background: #fff;
-      text-transform: uppercase;
-
-    }
-
-  </style>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139151307-1"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-          dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-     // gtag('config', 'UA-139151307-1');
-  </script>
-
-
-<link rel="stylesheet" href="styles.a22fff368397b087d485.css"></head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebRTC Demo</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
+  <h2>1. Start your Webcam</h2>
+  <div class="videos">
+    <span>
+      <h3>Local Stream</h3>
+      <video id="webcamVideo" autoplay playsinline></video>
+    </span>
+    <span>
+      <h3>Remote Stream</h3>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </span>
 
 
-  <app-root>
-    <div class="loader">
-      <h1>Loading...</h1>
-    </div>
-  </app-root>
+  </div>
 
-  <script>
-    AOS.init({
-      duration: 2000
-    });
+  <button id="webcamButton">Start webcam</button>
+  <h2>2. Create a new Call</h2>
+  <button id="callButton" disabled>Create Call (offer)</button>
 
-  </script>
+  <h2>3. Join a Call</h2>
+  <p>Answer the call from a different browser window or device</p>
 
+  <input id="callInput" />
+  <button id="answerButton" disabled>Answer</button>
 
-<script src="runtime-es2015.14a3d0483cc4cbbc9c32.js" type="module"></script><script src="runtime-es5.14a3d0483cc4cbbc9c32.js" nomodule defer></script><script src="polyfills-es5.8be835282fc9d45ab4ad.js" nomodule defer></script><script src="polyfills-es2015.131fa5ab3bbbe1d2f053.js" type="module"></script><script src="scripts.6f7e641fed8af8d9075a.js" defer></script><script src="main-es2015.502042f40be3209ab013.js" type="module"></script><script src="main-es5.502042f40be3209ab013.js" nomodule defer></script></body>
+  <h2>4. Hangup</h2>
+
+  <button id="hangupButton" disabled>Hangup</button>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
 
 </html>
